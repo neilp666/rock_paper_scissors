@@ -35,7 +35,7 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 .intro button ,
@@ -49,7 +49,6 @@ section {
     background: rgb(45, 117, 96);
     border-radius: 3px;
     cursor: pointer;
-    pointer-events: none;
 }
 
 .match {
@@ -57,8 +56,8 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
+    transition: opacity 0.5s ease 0.5s;
+  }
 .winner {
     color: rgb(224, 224, 224);
     text-align: center;
@@ -73,15 +72,15 @@ section {
 }
 
 .player-hand {
-    transform: rotateX(180deg);
+    transform: rotateY(180deg);
 }
 
 div.fadeOut {
     opacity: 0;
     pointer-events: none;
-}
-
+  }
+  
 div.fadeIn {
     opacity: 1;
     pointer-events: all;
-}
+  }
