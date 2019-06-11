@@ -30,6 +30,26 @@ const game = () => {
         });
     };
 
+    const compareHands = (playerChoice, computerChoice) => {
+
+        const winner = document.querySelector('.winner');
+
+        if(playerChoice === computerChoice) {
+            winner.textContent = 'It is a tie';
+            return;
+        }
+
+        if(playerChoice === 'rock') {
+            if(computerChoice === 'scissors') {
+                winner.textContent = 'Player Wins'
+                return;
+            } else {
+                winner.textContent = 'Computer Wins';
+                return;
+            }
+        }
+    }
+
     startGame();
     playMatch();
 
