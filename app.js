@@ -48,6 +48,25 @@ const game = () => {
                 return;
             }
         }
+
+        if(playerChoice === 'paper') {
+            if(computerChoice === 'scissors') {
+                winner.textContent = 'Computer Wins'
+                return;
+            } else {
+                winner.textContent = 'Player Wins';
+                return;
+            }
+        }
+        if(playerChoice === 'scissors') {
+            if(computerChoice === 'rock') {
+                winner.textContent = 'Computer Wins'
+                return;
+            } else {
+                winner.textContent = 'Player Wins';
+                return;
+            }
+        }
     }
 
     startGame();
